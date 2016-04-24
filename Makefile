@@ -1,8 +1,8 @@
 .PHONY: all build install list migrate push test
 
 
-PROJECT := dockercloud
-DOCKER_IMAGE := roll/dockercloud
+PROJECT := example
+DOCKER_IMAGE := roll/example
 
 
 all: list

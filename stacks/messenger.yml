@@ -1,5 +1,5 @@
 web:
-  image: roll/dockercloud
+  image: roll/example
   command: python -m messenger.server
   restart: always
   ports:
