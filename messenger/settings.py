@@ -11,5 +11,5 @@ from dotenv import load_dotenv; load_dotenv('.env')  # noqa
 # General
 
 PORT = int(os.environ.get('PORT', '8080'))
-DEBUG = os.environ.get('DEBUG', False)
+DEBUG = bool(int(os.environ.get('DEBUG', '1')))
 MESSAGE = os.environ.get('MESSAGE', 'Hello World!')
