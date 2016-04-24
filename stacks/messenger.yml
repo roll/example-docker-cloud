@@ -1,3 +1,5 @@
+# {"namespace": "example", "environments": ["staging", "production"]}
+
 web:
   image: "${IMAGE}"
   command: python -m messenger.server

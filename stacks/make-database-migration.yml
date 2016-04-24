@@ -1,3 +1,5 @@
+# {"project": "example", "environments": ["staging", "production"]}
+
 main:
   image: "${IMAGE}"
   command: echo "database migration"
