@@ -3,6 +3,8 @@ web:
   command: python -m messenger.server
   restart: always
   ports:
-    - '8080'
+    - "${PORT}:${PORT}"
   environment:
+    PORT:
+    DEBUG:
     MESSAGE:
