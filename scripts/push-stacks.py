@@ -15,7 +15,7 @@ environment = os.environ.get('ENVIRONMENT', '')
 # Set environment
 if environment:
     for key, value in os.environ.items():
-        suffix = '--' + environment
+        suffix = '__' + environment
         if key.endswith(suffix):
             key = key.replace(suffix, '')
             os.environ[key] = value
@@ -26,7 +26,7 @@ for name in os.listdir('stacks'):
     try:
         name, ext = name.split('.')
         if project:
-            cloud_name = '--'.join([project, name, environment])
+            cloud_name = '__'.join([project, name, environment])
     except Exception:
         continue
     if ext != 'yml':
