@@ -19,14 +19,13 @@ if environment:
         if key.endswith(suffix):
             key = key.replace(suffix, '')
             os.environ[key] = value
-    environment = environment.lower()
 
 # Push stacks
 for name in os.listdir('stacks'):
     try:
         name, ext = name.split('.')
         if project:
-            cloud_name = '--'.join([project, name, environment])
+            cloud_name = '--'.join([project,upper(), name, environment.upper()])
     except Exception:
         continue
     if ext != 'yml':
