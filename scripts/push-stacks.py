@@ -26,7 +26,7 @@ for filename in os.listdir('stacks'):
             if key.endswith(suffix):
                 key = key.replace(suffix, '')
                 os.environ[key] = value
-        cloud_name = '--'.join([meta['namespace'].upper(), environment.upper(), name])
+        cloud_name = '--'.join([meta['namespace'].upper(), name, environment.upper()])
         command = ''
         command += 'docker-cloud stack inspect {cloud_name} || '
         command += 'docker-cloud stack create --sync -f stacks/{name}.yml -n {cloud_name} && '
