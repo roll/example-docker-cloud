@@ -26,7 +26,7 @@ for name in os.listdir('stacks'):
     try:
         name, ext = name.split('.')
         if project:
-            cloud_name = '__'.join([project, name, environment])
+            cloud_name = '--'.join([project, name, environment])
     except Exception:
         continue
     if ext != 'yml':
@@ -36,5 +36,7 @@ for name in os.listdir('stacks'):
     command += 'docker-cloud stack create --sync -f stacks/{name}.yml -n {cloud_name} && '
     command += 'docker-cloud stack update --sync -f stacks/{name}.yml {cloud_name}'
     command = command.format(name=name, cloud_name=cloud_name)
-    subprocess.call(command, shell=True)
+    code = subprocess.call(command, shell=True)
+    if code:
+        exit(code)
     print('Pushed stack: "%s" as "%s"' % (name, cloud_name))
