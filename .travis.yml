@@ -1,0 +1,24 @@
+sudo:
+  false
+
+language:
+  python
+
+python:
+  - 3.4
+
+services:
+  - docker
+
+install:
+  - make install
+
+script:
+  - make build
+  - make test
+
+deploy:
+  - provider: script
+    script: make push
+    on:
+      branch: master
