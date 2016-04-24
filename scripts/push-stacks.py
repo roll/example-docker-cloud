@@ -25,7 +25,7 @@ for name in os.listdir('stacks'):
     try:
         name, ext = name.split('.')
         if project:
-            cloud_name = '--'.join([project.upper(), name, environment.upper()])
+            cloud_name = '--'.join([project.upper(), environment.upper(), name])
     except Exception:
         continue
     if ext != 'yml':
