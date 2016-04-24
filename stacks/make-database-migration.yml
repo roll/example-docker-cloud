@@ -1,4 +1,4 @@
-# {"project": "example", "environments": ["staging", "production"]}
+# {"namespace": "example", "environments": ["staging", "production"]}
 
 main:
   image: "${IMAGE}"
