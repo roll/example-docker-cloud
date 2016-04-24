@@ -14,7 +14,7 @@ environment = os.environ.get('ENVIRONMENT', '')
 
 # Set environment
 if environment:
-    for key, value in os.environ.items():
+    for key, value in list(os.environ.items()):
         suffix = '__' + environment
         if key.endswith(suffix):
             key = key.replace(suffix, '')
