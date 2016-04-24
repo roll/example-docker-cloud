@@ -1,3 +1,3 @@
 # docker-cloud-example
 
-Docker Cloud application example.
+Docker Cloud example.
