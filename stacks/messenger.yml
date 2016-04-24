@@ -1,5 +1,5 @@
 web:
-  image: roll/example
+  image: "${IMAGE}"
   command: python -m messenger.server
   restart: always
   ports:

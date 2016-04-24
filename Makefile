@@ -2,13 +2,12 @@
 
 
 PROJECT := example
-DOCKER_IMAGE := roll/example
 
 
 all: list
 
 build:
-	docker build -t $(DOCKER_IMAGE) .
+	docker build -t $$IMAGE .
 
 install:
 	pip install --upgrade -r requirements.dev.txt
