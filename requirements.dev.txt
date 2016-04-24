@@ -1,0 +1,9 @@
+-r requirements.txt
+docker-compose
+docker-cloud
+pylama
+mock
+pytest
+pytest-cov
+coverage
+coveralls

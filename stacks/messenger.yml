@@ -1,0 +1,8 @@
+web:
+  image: roll/dockercloud
+  command: python -m messenger.server
+  restart: always
+  ports:
+    - '8080:8080'
+  environment:
+    MESSAGE:
