@@ -21,7 +21,7 @@ migrate:
 push:
 	$${CI?"Push is avaiable only on CI/CD server"}
 	docker login -e $$DOCKER_EMAIL -u $$DOCKER_USER -p $$DOCKER_PASS
-	docker push $(DOCKER_IMAGE)
+	docker push $$IMAGE
 	PROJECT=$(PROJECT) ENVIRONMENT=STAGING python scripts/push-stacks.py
 	PROJECT=$(PROJECT) ENVIRONMENT=PRODUCTION python scripts/push-stacks.py
 
