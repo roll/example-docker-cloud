@@ -94,7 +94,7 @@ So this stack file will lead to the following Docker Cloud stacks:
 - EXAMPLE--messenger--PRODUCTION
 
 **Store all your stack files in `stacks` directory so it will be
-pushed to Docker Cloud automatically by `scripts/push-stacks.py` script**
+pushed to Docker Cloud automatically by `scripts/push-stacks.py` script.**
 
 We recommend to use nouns for auto restarting applications like `messanger` and
 use verb form like `make-database-migration` for one time scripts
