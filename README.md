@@ -5,7 +5,7 @@ Docker Cloud example - how to run your Docker Compose projects in a cloud.
 ## Overview
 
 Here is a simple Flask application called `messenger` returning "Hello <something>!".
-This application is deployd to Docker Cloud with two environments:
+This application is deployed to Docker Cloud with two environments:
 
 - staging - http://web.example--messenger--staging.ac85ef32.svc.dockerapp.io:8080/
 - production - http://web.example--messenger--production.fe14dd84.svc.dockerapp.io/
@@ -96,9 +96,9 @@ So this stack file will lead to the following Docker Cloud stacks:
 **Store all your stack files in `stacks` directory so it will be
 pushed to Docker Cloud automatically by `scripts/push-stacks.py` script**
 
-We recomend to use nouns for auto restarting applications like `messanger` and
+We recommend to use nouns for auto restarting applications like `messanger` and
 use verb form like `make-database-migration` for one time scripts
-you need to run against your infrastucture.
+you need to run against your infrastructure.
 
 Here we've run into environments concepts - let's
 stay on it in the next section.
@@ -109,7 +109,7 @@ Most part of web applications need minimum two environments to deploy into:
 - staging
 - production
 
-With Docker Cloud we could use 12 Factor App methodolody (http://12factor.net/)
+With Docker Cloud we could use 12 Factor App methodology (http://12factor.net/)
 but we need to adopt it to the `stack` pushing workflow.
 
 To accomplish this task we're going to use our CI/CD server to set
@@ -149,7 +149,7 @@ For now we have enough basics to understand what's happening on CI/CD server
 - server installs and builds our application
 - server runs tests
 - server logins to Docker Cloud
-- server push builded image to Docker Hub
+- server push built image to Docker Hub
 - server render and push all stacks from `stacks` directory to Docker Cloud
 
 **Here is no deployment has happend. We just having in sync our Github
@@ -164,14 +164,14 @@ To make an actual deployment go to the Docker Cloud account:
 
 ![Docker Cloud](files/cloud.png)
 
-Simpe workflow to redeploy (use the buttons on the right):
-- stop running prevous version of `messenger`
+Simple workflow to redeploy (use the buttons on the right):
+- stop running previous version of `messenger`
 - redeploy `make-database-migration`
 - redelpoy `messenger`
 
 Of course it could be much more interesting. It could use `Makefile`
 to automatically redeploy `staging` for example etc. But the main
-concept of Docker Cloud delpoyment (it's just one of strategies of
+concept of Docker Cloud deployment (it's just one of strategies of
 course) is here.
 
 Thanks for the reading!
