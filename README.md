@@ -1,6 +1,6 @@
 # docker-cloud-example
 
-Docker Cloud example - how to run your Docker Compose projects in a cloud.
+Docker Cloud example - how to run your Docker Compose project in a cloud.
 
 ## Overview
 
