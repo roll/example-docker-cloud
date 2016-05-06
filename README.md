@@ -1,5 +1,8 @@
 # docker-cloud-example
 
+[![Waffle](https://img.shields.io/badge/board-waffle-brightgreen.svg)](https://waffle.io/respect31/respect31.com)
+[![Gitter](https://img.shields.io/badge/chat-gitter-brightgreen.svg)](https://gitter.im/respect31/public)
+
 Docker Cloud example - how to run your Docker Compose project in a cloud.
 
 ## Overview
